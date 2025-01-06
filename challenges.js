@@ -16,10 +16,43 @@ User Input: 10
 Output: "The late fee is $2.50."
 */
 
-// ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
+// function calculateLateFee(overdueDays) {
+//   const feePerDay = 0.25;
+//   const totalFee = overdueDays * feePerDay;
+//   return totalFee.toFixed(2);
+// }
+
+// input = process.argv[2];
+// const overdueDays = Number(input);
+
+// if (isNaN(overdueDays) || overdueDays > 0) {
+//   console.log("Please enter a valid number of overdue days.");
+// } else {
+//   const lateFee = calculateLateFee(overdueDays);
+//   console.log(`The late fee is $${lateFee}.`);
+// }
+// console.log(calculateLateFee(6));
 
 // Extra Task:
 // - Convert the function into a function expression.
+
+const calculateLateFee = function (overdueDays) {
+  const feePerDay = 0.25;
+  const totalFee = overdueDays * feePerDay;
+  return totalFee.toFixed(2);
+};
+
+const input = process.argv[2];
+const overdueDays = Number(input);
+
+if (isNaN(overdueDays) || overdueDays < 0) {
+  console.log("Please enter a valid number of overdue days.");
+} else {
+  const lateFee = calculateLateFee(overdueDays);
+  console.log(`The late fee is $${lateFee}.`);
+}
+
+//console.log(calculateLateFee(6));
 
 /*
 Task 2 : Favorite Color Finder 🚀🚀🚀🚀
@@ -39,10 +72,43 @@ User Input: "Red"
 Output: "Red: You are passionate and bold."
 */
 
-// ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
+// function findColorMeaning() {
+//   const color = "red";
+
+//   if (color === "blue") {
+//     console.log("Blue: You love calm and peace.");
+//   } else if (color === "red") {
+//     console.log("Red: You are passionate and bold.");
+//   } else if (color === "green") {
+//     console.log("Green: You are connected to nature.");
+//   } else if (color === "yellow") {
+//     console.log("Yellow: You radiate happiness and energy.");
+//   } else {
+//     console.log("That's a unique choice!");
+//   }
+// }
+
+// findColorMeaning();
 
 // Extra Task:
 // - Rewrite the function using an arrow function.
+const findColorMeaning2 = () => {
+  const color = "green";
+
+  if (color === "blue") {
+    console.log("Blue: You love calm and peace.");
+  } else if (color === "red") {
+    console.log("Red: You are passionate and bold.");
+  } else if (color === "green") {
+    console.log("Green: You are connected to nature.");
+  } else if (color === "yellow") {
+    console.log("Yellow: You radiate happiness and energy.");
+  } else {
+    console.log("That's a unique choice!");
+  }
+};
+
+findColorMeaning2();
 
 /*
 Task 3 : Lawyer's Case Log 🚀🚀🚀🚀
@@ -120,4 +186,3 @@ Extra Credit:
 - Extend the program to accept multiple students' names and scores and generate a report for each student using a loop.
 - Use an arrow function for at least one of the functions.
 */
-const getStudent = (name, scores) => {};
