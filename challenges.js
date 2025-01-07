@@ -124,10 +124,18 @@ Input: logCase("John Doe", 12345)
 Output: "Case #12345: John Doe's case is now logged."
 */
 
-// ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
+// function logCase(clientName, caseNumber) {
+//   return `case#${caseNumber}: ${clientName}'s case is now logged`;
+// }
+// console.log(logCase("johm", 12345));
 
 // Extra Task:
 // - Rewrite the function as an arrow function.
+const logCase = (clientName, caseNumber) => {
+  return `case#${caseNumber}: ${clientName}'s case is now logged`;
+};
+
+console.log(logCase("ali", 32324));
 
 /*
 Task 4 : Attendance Tracker 🚀🚀🚀🚀
