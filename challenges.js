@@ -147,17 +147,25 @@ Input: markAttendance("Amina", true)
 Output: "Amina is present."
 */
 
-function markAttendance(name, isPresent) {
+// function markAttendance(name, isPresent) {
+//   if (isPresent === true) {
+//     console.log(name, "is present");
+//   } else {
+//     console.log(name, "is absent");
+//   }
+// }
+// markAttendance("mohamud", false);
+
+// Extra Task:
+// - Convert the function into a function expression.
+const markAttendance = function (name, isPresent) {
   if (isPresent === true) {
     console.log(name, "is present");
   } else {
     console.log(name, "is absent");
   }
-}
+};
 markAttendance("mohamud", false);
-
-// Extra Task:
-// - Convert the function into a function expression.
 
 /*
 STRETCH TASK: Student Grade Report Generator 🏈🏈🏈🏈
