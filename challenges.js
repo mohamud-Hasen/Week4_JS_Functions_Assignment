@@ -147,7 +147,14 @@ Input: markAttendance("Amina", true)
 Output: "Amina is present."
 */
 
-// ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
+function markAttendance(name, isPresent) {
+  if (isPresent === true) {
+    console.log(name, "is present");
+  } else {
+    console.log(name, "is absent");
+  }
+}
+markAttendance("mohamud", false);
 
 // Extra Task:
 // - Convert the function into a function expression.
