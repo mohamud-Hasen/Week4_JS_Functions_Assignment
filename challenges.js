@@ -209,3 +209,33 @@ Extra Credit:
 - Extend the program to accept multiple students' names and scores and generate a report for each student using a loop.
 - Use an arrow function for at least one of the functions.
 */
+
+const calculateAverage = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
+};
+
+const determineGrade = (average) => {
+  if (average >= 90) {
+    return "A";
+  } else if (average >= 80) {
+    return "B";
+  } else if (average >= 70) {
+    return "C";
+  } else {
+    return "F";
+  }
+};
+
+const generateReport = (studentName, score1, score2, score3) => {
+  const average = calculateAverage(score1, score2, score3);
+  const letterGrade = determineGrade(average);
+  return `${studentName} - average score: ${average.toFixed(
+    2
+  )}, Grade: ${letterGrade}`;
+};
+const studentName = "amina";
+const score1 = 85;
+const score2 = 90;
+const score3 = 78;
+
+console.log(generateReport(studentName, score1, score2, score3));
