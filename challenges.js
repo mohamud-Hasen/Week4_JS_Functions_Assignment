@@ -46,7 +46,7 @@ const input = process.argv[2];
 const overdueDays = Number(input);
 
 if (isNaN(overdueDays) || overdueDays < 0) {
-  console.log("Please enter a valid number of overdue days.");
+  //console.log("Please enter a valid number of overdue days.");
 } else {
   const lateFee = calculateLateFee(overdueDays);
   console.log(`The late fee is $${lateFee}.`);
@@ -108,7 +108,7 @@ const findColorMeaning2 = () => {
   }
 };
 
-findColorMeaning2();
+//findColorMeaning2();
 
 /*
 Task 3 : Lawyer's Case Log 🚀🚀🚀🚀
@@ -135,7 +135,7 @@ const logCase = (clientName, caseNumber) => {
   return `case#${caseNumber}: ${clientName}'s case is now logged`;
 };
 
-console.log(logCase("ali", 32324));
+//console.log(logCase("ali", 32324));
 
 /*
 Task 4 : Attendance Tracker 🚀🚀🚀🚀
@@ -173,7 +173,7 @@ const markAttendance = function (name, isPresent) {
     console.log(name, "is absent");
   }
 };
-markAttendance("mohamud", false);
+//markAttendance("mohamud", false);
 
 /*
 STRETCH TASK: Student Grade Report Generator 🏈🏈🏈🏈
@@ -210,6 +210,36 @@ Extra Credit:
 - Use an arrow function for at least one of the functions.
 */
 
+// const calculateAverage = (score1, score2, score3) => {
+//   return (score1 + score2 + score3) / 3;
+// };
+
+// const determineGrade = (average) => {
+//   if (average >= 90) {
+//     return "A";
+//   } else if (average >= 80) {
+//     return "B";
+//   } else if (average >= 70) {
+//     return "C";
+//   } else {
+//     return "F";
+//   }
+// };
+
+// const generateReport = (studentName, score1, score2, score3) => {
+//   const average = calculateAverage(score1, score2, score3);
+//   const letterGrade = determineGrade(average);
+//   return `${studentName} - average score: ${average.toFixed(
+//     2
+//   )}, Grade: ${letterGrade}`;
+// };
+// const studentName = "amina";
+// const score1 = 85;
+// const score2 = 90;
+// const score3 = 78;
+
+// console.log(generateReport(studentName, score1, score2, score3));
+
 const calculateAverage = (score1, score2, score3) => {
   return (score1 + score2 + score3) / 3;
 };
@@ -233,9 +263,14 @@ const generateReport = (studentName, score1, score2, score3) => {
     2
   )}, Grade: ${letterGrade}`;
 };
-const studentName = "amina";
-const score1 = 85;
-const score2 = 90;
-const score3 = 78;
+const students = [
+  { name: "Amina", scores: [85, 90, 78] },
+  { name: "Mohamud", scores: [95, 87, 98] },
+  { name: "Aisha", scores: [74, 67, 78] },
+  { name: "Abullahi", scores: [55, 61, 58] },
+];
 
-console.log(generateReport(studentName, score1, score2, score3));
+students.forEach((student) => {
+  const [score1, score2, score3] = student.scores;
+  console.log(generateReport(student.name, score1, score2, score3));
+});
